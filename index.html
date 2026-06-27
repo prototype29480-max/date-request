@@ -244,15 +244,7 @@
       status.textContent = 'Envoi en cours... 💌';
       document.getElementById('drSend').disabled = true;
       if (typeof emailjs !== 'undefined') {
-        emailjs.send("service_mylovesouka", "template_h1cmitq", {
-          to_email: email, reply_to: email, date: dateStr, activity: choice
-        }).then(() => {
-          status.textContent = 'Confirmation envoyée à ' + email + ' !';
-        }).catch(() => {
-          status.textContent = 'Erreur lors de l\'envoi — vérifie tes clés EmailJS.';
-          document.getElementById('drSend').disabled = false;
-        });
-        emailjs.send("service_mylovesouka", "template_h1cmitq", {
+        emailjs.send("service_mylove", "template_h1cmitq", {
           to_email: email, reply_to: email, date: dateStr, activity: choice
         }).then(() => {
           status.textContent = 'Confirmation envoyée à ' + email + ' !';
